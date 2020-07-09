@@ -5,7 +5,9 @@ var FizzBuzz = /** @class */ (function () {
     function FizzBuzz() {
     }
     FizzBuzz.fizzBuzz = function (n, divisible_by_num1, divisible_by_num2) {
-        return n % divisible_by_num1 == 0 && n % divisible_by_num2 == 0 ? 'FizzBuzz' : n % divisible_by_num1 == 0 ? 'Fizz' : n % divisible_by_num2 == 0 ? 'Buzz' : n;
+        var fizz_buzz = "";
+        fizz_buzz = (n % divisible_by_num1 == 0 ? 'Fizz' : '') + (n % divisible_by_num2 == 0 ? 'Buzz' : '');
+        return fizz_buzz.length > 0 ? fizz_buzz : n;
     };
     return FizzBuzz;
 }());
