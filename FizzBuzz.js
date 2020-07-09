@@ -5,18 +5,7 @@ var FizzBuzz = /** @class */ (function () {
     function FizzBuzz() {
     }
     FizzBuzz.fizzBuzz = function (n, divisible_by_num1, divisible_by_num2) {
-        if (n % divisible_by_num1 == 0 && n % divisible_by_num2 == 0) {
-            return "FizzBuzz";
-        }
-        else if (n % divisible_by_num1 == 0) {
-            return "Fizz";
-        }
-        else if (n % divisible_by_num2 == 0) {
-            return "Buzz";
-        }
-        else {
-            return n;
-        }
+        return n % divisible_by_num1 == 0 && n % divisible_by_num2 == 0 ? 'FizzBuzz' : n % divisible_by_num1 == 0 ? 'Fizz' : n % divisible_by_num2 == 0 ? 'Buzz' : n;
     };
     return FizzBuzz;
 }());
